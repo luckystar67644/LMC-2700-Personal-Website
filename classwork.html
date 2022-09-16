@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class Work</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/javascript/script.js"></script>
+    </head>
+
+    <body class="w3-theme-l1 w3-content" style="max-width:1600px">
+
+        <!-- Sidebar/menu -->
+        <nav class="w3-sidebar w3-bar-block w3-theme w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+            <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32 w3-hover-purple">CLOSE</a> 
+            <a href="/index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">HOME</a>
+            <a href="/personalwork.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">PERSONAL WORK</a>
+            <a href="/classwork.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">CLASS WORK</a>
+            <a href="/prowork.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">PROFESSIONAL WORK</a>
+        </nav>
+
+        <!-- Top menu on small screens -->
+        <header class="w3-container w3-top w3-theme-d1 w3-xlarge w3-padding-16">
+            <span class="w3-left w3-padding">ANGELICA JONES</span>
+            <a href="javascript:void(0)" class="w3-right w3-button w3-theme-d1 w3-ripple w3-hover-purple" onclick="w3_open()">☰</a>
+        </header>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span
+                        class="w3-hide-small">CLASS</span> WORK</span>
+            </div>
+        </div>
+
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+            <div class="w3-content w3-container w3-padding-64" id="about">
+                <h3 class="w3-center">ABOUT ME</h3>
+                <p class="w3-center"><em>I love photography</em></p>
+                <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+  
+        <!-- Photo grid -->
+        <div class="w3-row style="margin-bottom:128px"">
+            <div class="w3-third">
+                <img src="/images/class/abc.png" class="w3-hover-opacity" style="width:100%" onclick="onClick(this)" alt="Description of project">
+                <img src="/images/class/book.png" class="w3-hover-opacity"  style="width:100%" onclick="onClick(this)" alt="Description of project">
+                <img src="/images/class/bit.png"  class="w3-hover-opacity" style="width:100%" onclick="onClick(this)" alt="Description of project">
+            </div>
+            
+            <div class="w3-third">
+                <img src="/images/class/ai.png" class="w3-hover-opacity" style="width:100%" onclick="onClick(this)" alt="Description of project">
+                <img src="/images/class/mono.jpg" class="w3-hover-opacity" style="width:100%" onclick="onClick(this)" alt="Description of project">
+                <img src="/images/class/album.png" class="w3-hover-opacity" style="width:100%" onclick="onClick(this)" alt="Description of project">
+                <img src="/images/class/hoax.jpg" class="w3-hover-opacity" style="width:100%" onclick="onClick(this)" alt="Description of project">
+            </div>
+            
+            <div class="w3-third">
+                <img src="/images/class/bird.jpg" class="w3-hover-opacity" style="width:100%" onclick="onClick(this)" alt="Description of project">
+                <img src="/images/class/china.png" class="w3-hover-opacity" style="width:100%" onclick="onClick(this)" alt="Description of project">
+                <img src="/images/class/gwc.png" class="w3-hover-opacity" style="width:100%" onclick="onClick(this)" alt="Description of project">
+            </div>
+    
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+  
+
+        <!-- Footer -->
+        <footer class="w3-center w3-theme-d1 w3-padding-64 w3-opacity w3-hover-opacity-off">
+            <a href="/index.html" class="w3-btn w3-round-xxlarge w3-theme-l2 w3-ripple w3-hover-purple">To the top</a>
+            <div class="w3-xlarge w3-section">
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+        </footer>
+    </body>
+</html>
