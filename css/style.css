@@ -21,14 +21,14 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url('images/original.png');
+  background-image: url('//images/original.png');
   min-height: 100%;
 }
 
 
 /* Third image (Contact) */
 .bgimg-3 {
-  background-image: url("images/original.png");
+  background-image: url("//images/original.png");
   min-height: 400px;
 }
 
